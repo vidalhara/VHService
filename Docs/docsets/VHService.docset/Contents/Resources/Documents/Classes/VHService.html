@@ -310,9 +310,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9VHServiceAAC11environmentAbA0A11Environment_p_tcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(environment:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9VHServiceAAC11environmentAbA0A11Environment_p_tcfc">init(environment:<wbr>)</a>
+                    <a name="/s:9VHServiceAAC11environment13configurationAbA0A11Environment_p_So25NSURLSessionConfigurationCtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(environment:configuration:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9VHServiceAAC11environment13configurationAbA0A11Environment_p_So25NSURLSessionConfigurationCtcfc">init(environment:<wbr>configuration:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -327,7 +327,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">environment</span><span class="p">:</span> <span class="kt"><a href="../Protocols/VHServiceEnvironment.html">VHServiceEnvironment</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">environment</span><span class="p">:</span> <span class="kt"><a href="../Protocols/VHServiceEnvironment.html">VHServiceEnvironment</a></span><span class="p">,</span> <span class="nv">configuration</span><span class="p">:</span> <span class="kt">URLSessionConfiguration</span> <span class="o">=</span> <span class="o">.</span><span class="nf">vhDefault</span><span class="p">())</span></code></pre>
 
                         </div>
                       </div>
@@ -344,6 +344,18 @@
                               <td>
                                 <div>
                                   <p>Settings of the service</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>configuration</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>URLSessionConfiguration. If you want, you can use predefined <code><a href="../Extensions/URLSessionConfiguration.html#/s:So25NSURLSessionConfigurationC9VHServiceE9vhDefaultAByFZ">URLSessionConfiguration.vhDefault()</a></code> or <code>URLSessionConfiguration.vhBackground()</code></p>
                                 </div>
                               </td>
                             </tr>

@@ -31,17 +31,17 @@ open class VHService {
     internal lazy var sessionDelegate: SessionDelegate = SessionDelegate(for: self)
 
     /// Session of the service
-    public private(set) lazy var session: URLSession = {
-        return URLSession(configuration: .vhDefault(), delegate: sessionDelegate, delegateQueue: nil)
-    }()
+    public private(set) lazy var session: URLSession = URLSession(configuration: .vhDefault(), delegate: sessionDelegate, delegateQueue: nil)
 
     private lazy var cancelOperations: [String: () -> Void] = [:]
     private let lock = UnfairLock()
 
     /// You can use Service to send requests
     /// - Parameter environment: Settings of the service
-    public init(environment: VHServiceEnvironment) {
+    /// - Parameter configuration: URLSessionConfiguration. If you want, you can use predefined `URLSessionConfiguration.vhDefault()` or `URLSessionConfiguration.vhBackground()`
+    public init(environment: VHServiceEnvironment, configuration: URLSessionConfiguration = .vhDefault()) {
         self.environment = environment
+        self.session = URLSession(configuration: configuration, delegate: sessionDelegate, delegateQueue: nil)
     }
 
     /// You can send your request in this method

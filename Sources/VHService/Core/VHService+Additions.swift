@@ -34,18 +34,3 @@ internal extension Optional where Wrapped == DispatchQueue {
         }
     }
 }
-
-// MARK: - Service with Empty Enviroment
-
-internal extension VHService {
-
-    static func empty() -> VHService {
-        return VHService(environment: VHEmptyEnviroment())
-    }
-}
-
-internal struct VHEmptyEnviroment: VHServiceEnvironment {
-    public let host: String = ""
-    public let port: String = ""
-    public let isSecure: Bool = false
-}
