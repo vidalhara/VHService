@@ -1,0 +1,582 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1EBCEB1C27E622F700E536B8 /* VHService+SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBCEAED27E622F700E536B8 /* VHService+SessionDelegate.swift */; };
+		1EBCEB1D27E622F700E536B8 /* VHService+RetryPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBCEAEE27E622F700E536B8 /* VHService+RetryPolicy.swift */; };
+		1EBCEB1E27E622F700E536B8 /* VHService+DefaultRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBCEAF027E622F700E536B8 /* VHService+DefaultRequest.swift */; };
+		1EBCEB1F27E622F700E536B8 /* VHRequest+URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBCEAF227E622F700E536B8 /* VHRequest+URLRequest.swift */; };
+		1EBCEB2027E622F700E536B8 /* VHRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBCEAF327E622F700E536B8 /* VHRequest.swift */; };
+		1EBCEB2127E622F700E536B8 /* VHService+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBCEAF427E622F700E536B8 /* VHService+Request.swift */; };
+		1EBCEB2227E622F700E536B8 /* VHDataLiteralType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBCEAF627E622F700E536B8 /* VHDataLiteralType.swift */; };
+		1EBCEB2327E622F700E536B8 /* VHService+UploadRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBCEAF727E622F700E536B8 /* VHService+UploadRequest.swift */; };
+		1EBCEB2427E622F700E536B8 /* VHService+DownloadRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBCEAF827E622F700E536B8 /* VHService+DownloadRequest.swift */; };
+		1EBCEB2527E622F700E536B8 /* VHService+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBCEAF927E622F700E536B8 /* VHService+Additions.swift */; };
+		1EBCEB2627E622F700E536B8 /* VHService+Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBCEAFA27E622F700E536B8 /* VHService+Response.swift */; };
+		1EBCEB2727E622F700E536B8 /* VHServiceEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBCEAFC27E622F700E536B8 /* VHServiceEnvironment.swift */; };
+		1EBCEB2827E622F700E536B8 /* VHServiceErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBCEAFE27E622F700E536B8 /* VHServiceErrors.swift */; };
+		1EBCEB2927E622F700E536B8 /* VHService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBCEAFF27E622F700E536B8 /* VHService.swift */; };
+		1EBCEB2A27E622F700E536B8 /* VHService+Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBCEB0027E622F700E536B8 /* VHService+Combine.swift */; };
+		1EBCEB2B27E622F700E536B8 /* Encodable+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBCEB0227E622F700E536B8 /* Encodable+Additions.swift */; };
+		1EBCEB2C27E622F700E536B8 /* URLSessionConfiguration+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBCEB0327E622F700E536B8 /* URLSessionConfiguration+Additions.swift */; };
+		1EBCEB2D27E622F700E536B8 /* URL+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBCEB0527E622F700E536B8 /* URL+Additions.swift */; };
+		1EBCEB2E27E622F700E536B8 /* URLResponder+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBCEB0627E622F700E536B8 /* URLResponder+Additions.swift */; };
+		1EBCEB2F27E622F700E536B8 /* Error+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBCEB0727E622F700E536B8 /* Error+Additions.swift */; };
+		1EBCEB3027E622F700E536B8 /* Any+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBCEB0827E622F700E536B8 /* Any+Additions.swift */; };
+		1EBCEB3127E622F700E536B8 /* Float+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBCEB0927E622F700E536B8 /* Float+Additions.swift */; };
+		1EBCEB3227E622F700E536B8 /* URLRequest+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBCEB0A27E622F700E536B8 /* URLRequest+Additions.swift */; };
+		1EBCEB3327E622F700E536B8 /* Data+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBCEB0B27E622F700E536B8 /* Data+Additions.swift */; };
+		1EBCEB3427E622F700E536B8 /* Result+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBCEB0C27E622F700E536B8 /* Result+Additions.swift */; };
+		1EBCEB3527E622F700E536B8 /* Decodable+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBCEB0D27E622F700E536B8 /* Decodable+Additions.swift */; };
+		1EBCEB3627E622F700E536B8 /* Dictionary+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBCEB0E27E622F700E536B8 /* Dictionary+Additions.swift */; };
+		1EBCEB3827E622F700E536B8 /* VHServiceLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBCEB1127E622F700E536B8 /* VHServiceLogger.swift */; };
+		1EBCEB3B27E622F700E536B8 /* UnfairLock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBCEB1727E622F700E536B8 /* UnfairLock.swift */; };
+		1EBCEB3C27E622F700E536B8 /* NotificationToken+NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBCEB1927E622F700E536B8 /* NotificationToken+NSObject.swift */; };
+		1EBCEB3D27E622F700E536B8 /* NotificationToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBCEB1A27E622F700E536B8 /* NotificationToken.swift */; };
+		1EBCEB3E27E622F700E536B8 /* VHCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBCEB1B27E622F700E536B8 /* VHCache.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1EBCEADD27E621F000E536B8 /* VHService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VHService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EBCEAED27E622F700E536B8 /* VHService+SessionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VHService+SessionDelegate.swift"; sourceTree = "<group>"; };
+		1EBCEAEE27E622F700E536B8 /* VHService+RetryPolicy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VHService+RetryPolicy.swift"; sourceTree = "<group>"; };
+		1EBCEAF027E622F700E536B8 /* VHService+DefaultRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VHService+DefaultRequest.swift"; sourceTree = "<group>"; };
+		1EBCEAF227E622F700E536B8 /* VHRequest+URLRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VHRequest+URLRequest.swift"; sourceTree = "<group>"; };
+		1EBCEAF327E622F700E536B8 /* VHRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHRequest.swift; sourceTree = "<group>"; };
+		1EBCEAF427E622F700E536B8 /* VHService+Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VHService+Request.swift"; sourceTree = "<group>"; };
+		1EBCEAF627E622F700E536B8 /* VHDataLiteralType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHDataLiteralType.swift; sourceTree = "<group>"; };
+		1EBCEAF727E622F700E536B8 /* VHService+UploadRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VHService+UploadRequest.swift"; sourceTree = "<group>"; };
+		1EBCEAF827E622F700E536B8 /* VHService+DownloadRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VHService+DownloadRequest.swift"; sourceTree = "<group>"; };
+		1EBCEAF927E622F700E536B8 /* VHService+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VHService+Additions.swift"; sourceTree = "<group>"; };
+		1EBCEAFA27E622F700E536B8 /* VHService+Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VHService+Response.swift"; sourceTree = "<group>"; };
+		1EBCEAFC27E622F700E536B8 /* VHServiceEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHServiceEnvironment.swift; sourceTree = "<group>"; };
+		1EBCEAFE27E622F700E536B8 /* VHServiceErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHServiceErrors.swift; sourceTree = "<group>"; };
+		1EBCEAFF27E622F700E536B8 /* VHService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHService.swift; sourceTree = "<group>"; };
+		1EBCEB0027E622F700E536B8 /* VHService+Combine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VHService+Combine.swift"; sourceTree = "<group>"; };
+		1EBCEB0227E622F700E536B8 /* Encodable+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Encodable+Additions.swift"; sourceTree = "<group>"; };
+		1EBCEB0327E622F700E536B8 /* URLSessionConfiguration+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLSessionConfiguration+Additions.swift"; sourceTree = "<group>"; };
+		1EBCEB0527E622F700E536B8 /* URL+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+Additions.swift"; sourceTree = "<group>"; };
+		1EBCEB0627E622F700E536B8 /* URLResponder+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLResponder+Additions.swift"; sourceTree = "<group>"; };
+		1EBCEB0727E622F700E536B8 /* Error+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Error+Additions.swift"; sourceTree = "<group>"; };
+		1EBCEB0827E622F700E536B8 /* Any+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Any+Additions.swift"; sourceTree = "<group>"; };
+		1EBCEB0927E622F700E536B8 /* Float+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Float+Additions.swift"; sourceTree = "<group>"; };
+		1EBCEB0A27E622F700E536B8 /* URLRequest+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLRequest+Additions.swift"; sourceTree = "<group>"; };
+		1EBCEB0B27E622F700E536B8 /* Data+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+Additions.swift"; sourceTree = "<group>"; };
+		1EBCEB0C27E622F700E536B8 /* Result+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Result+Additions.swift"; sourceTree = "<group>"; };
+		1EBCEB0D27E622F700E536B8 /* Decodable+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Decodable+Additions.swift"; sourceTree = "<group>"; };
+		1EBCEB0E27E622F700E536B8 /* Dictionary+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Additions.swift"; sourceTree = "<group>"; };
+		1EBCEB0F27E622F700E536B8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1EBCEB1127E622F700E536B8 /* VHServiceLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHServiceLogger.swift; sourceTree = "<group>"; };
+		1EBCEB1727E622F700E536B8 /* UnfairLock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnfairLock.swift; sourceTree = "<group>"; };
+		1EBCEB1927E622F700E536B8 /* NotificationToken+NSObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NotificationToken+NSObject.swift"; sourceTree = "<group>"; };
+		1EBCEB1A27E622F700E536B8 /* NotificationToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationToken.swift; sourceTree = "<group>"; };
+		1EBCEB1B27E622F700E536B8 /* VHCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VHCache.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1EBCEADA27E621F000E536B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1EBCEAD327E621F000E536B8 = {
+			isa = PBXGroup;
+			children = (
+				1EBCEAE927E622F700E536B8 /* Sources */,
+				1EBCEADE27E621F000E536B8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1EBCEADE27E621F000E536B8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1EBCEADD27E621F000E536B8 /* VHService.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1EBCEAE927E622F700E536B8 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				1EBCEAEA27E622F700E536B8 /* VHService */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		1EBCEAEA27E622F700E536B8 /* VHService */ = {
+			isa = PBXGroup;
+			children = (
+				1EBCEAEB27E622F700E536B8 /* Core */,
+				1EBCEB0127E622F700E536B8 /* Extensions */,
+				1EBCEB0F27E622F700E536B8 /* Info.plist */,
+				1EBCEB1027E622F700E536B8 /* Services */,
+			);
+			path = VHService;
+			sourceTree = "<group>";
+		};
+		1EBCEAEB27E622F700E536B8 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				1EBCEAEC27E622F700E536B8 /* Delegate */,
+				1EBCEAEE27E622F700E536B8 /* VHService+RetryPolicy.swift */,
+				1EBCEAEF27E622F700E536B8 /* Requests */,
+				1EBCEAF927E622F700E536B8 /* VHService+Additions.swift */,
+				1EBCEAFA27E622F700E536B8 /* VHService+Response.swift */,
+				1EBCEAFB27E622F700E536B8 /* Environment */,
+				1EBCEAFD27E622F700E536B8 /* Errors */,
+				1EBCEAFF27E622F700E536B8 /* VHService.swift */,
+				1EBCEB0027E622F700E536B8 /* VHService+Combine.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		1EBCEAEC27E622F700E536B8 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				1EBCEAED27E622F700E536B8 /* VHService+SessionDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		1EBCEAEF27E622F700E536B8 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				1EBCEAF027E622F700E536B8 /* VHService+DefaultRequest.swift */,
+				1EBCEAF127E622F700E536B8 /* Common */,
+				1EBCEAF727E622F700E536B8 /* VHService+UploadRequest.swift */,
+				1EBCEAF827E622F700E536B8 /* VHService+DownloadRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		1EBCEAF127E622F700E536B8 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				1EBCEAF227E622F700E536B8 /* VHRequest+URLRequest.swift */,
+				1EBCEAF327E622F700E536B8 /* VHRequest.swift */,
+				1EBCEAF427E622F700E536B8 /* VHService+Request.swift */,
+				1EBCEAF527E622F700E536B8 /* DataLiteralType */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		1EBCEAF527E622F700E536B8 /* DataLiteralType */ = {
+			isa = PBXGroup;
+			children = (
+				1EBCEAF627E622F700E536B8 /* VHDataLiteralType.swift */,
+			);
+			path = DataLiteralType;
+			sourceTree = "<group>";
+		};
+		1EBCEAFB27E622F700E536B8 /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				1EBCEAFC27E622F700E536B8 /* VHServiceEnvironment.swift */,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
+		1EBCEAFD27E622F700E536B8 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				1EBCEAFE27E622F700E536B8 /* VHServiceErrors.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		1EBCEB0127E622F700E536B8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1EBCEB0227E622F700E536B8 /* Encodable+Additions.swift */,
+				1EBCEB0327E622F700E536B8 /* URLSessionConfiguration+Additions.swift */,
+				1EBCEB0427E622F700E536B8 /* Internals */,
+				1EBCEB0D27E622F700E536B8 /* Decodable+Additions.swift */,
+				1EBCEB0E27E622F700E536B8 /* Dictionary+Additions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1EBCEB0427E622F700E536B8 /* Internals */ = {
+			isa = PBXGroup;
+			children = (
+				1EBCEB0527E622F700E536B8 /* URL+Additions.swift */,
+				1EBCEB0627E622F700E536B8 /* URLResponder+Additions.swift */,
+				1EBCEB0727E622F700E536B8 /* Error+Additions.swift */,
+				1EBCEB0827E622F700E536B8 /* Any+Additions.swift */,
+				1EBCEB0927E622F700E536B8 /* Float+Additions.swift */,
+				1EBCEB0A27E622F700E536B8 /* URLRequest+Additions.swift */,
+				1EBCEB0B27E622F700E536B8 /* Data+Additions.swift */,
+				1EBCEB0C27E622F700E536B8 /* Result+Additions.swift */,
+			);
+			path = Internals;
+			sourceTree = "<group>";
+		};
+		1EBCEB1027E622F700E536B8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1EBCEB1127E622F700E536B8 /* VHServiceLogger.swift */,
+				1EBCEB1527E622F700E536B8 /* Internals */,
+				1EBCEB1B27E622F700E536B8 /* VHCache.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		1EBCEB1527E622F700E536B8 /* Internals */ = {
+			isa = PBXGroup;
+			children = (
+				1EBCEB1627E622F700E536B8 /* Lock */,
+				1EBCEB1827E622F700E536B8 /* Notifications */,
+			);
+			path = Internals;
+			sourceTree = "<group>";
+		};
+		1EBCEB1627E622F700E536B8 /* Lock */ = {
+			isa = PBXGroup;
+			children = (
+				1EBCEB1727E622F700E536B8 /* UnfairLock.swift */,
+			);
+			path = Lock;
+			sourceTree = "<group>";
+		};
+		1EBCEB1827E622F700E536B8 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				1EBCEB1927E622F700E536B8 /* NotificationToken+NSObject.swift */,
+				1EBCEB1A27E622F700E536B8 /* NotificationToken.swift */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1EBCEAD827E621F000E536B8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1EBCEADC27E621F000E536B8 /* VHService */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1EBCEAE627E621F000E536B8 /* Build configuration list for PBXNativeTarget "VHService" */;
+			buildPhases = (
+				1EBCEAD827E621F000E536B8 /* Headers */,
+				1EBCEAD927E621F000E536B8 /* Sources */,
+				1EBCEADA27E621F000E536B8 /* Frameworks */,
+				1EBCEADB27E621F000E536B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VHService;
+			productName = VHService;
+			productReference = 1EBCEADD27E621F000E536B8 /* VHService.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1EBCEAD427E621F000E536B8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					1EBCEADC27E621F000E536B8 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 1EBCEAD727E621F000E536B8 /* Build configuration list for PBXProject "VHService" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1EBCEAD327E621F000E536B8;
+			productRefGroup = 1EBCEADE27E621F000E536B8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1EBCEADC27E621F000E536B8 /* VHService */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1EBCEADB27E621F000E536B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1EBCEAD927E621F000E536B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EBCEB3627E622F700E536B8 /* Dictionary+Additions.swift in Sources */,
+				1EBCEB2327E622F700E536B8 /* VHService+UploadRequest.swift in Sources */,
+				1EBCEB3E27E622F700E536B8 /* VHCache.swift in Sources */,
+				1EBCEB2D27E622F700E536B8 /* URL+Additions.swift in Sources */,
+				1EBCEB2827E622F700E536B8 /* VHServiceErrors.swift in Sources */,
+				1EBCEB3327E622F700E536B8 /* Data+Additions.swift in Sources */,
+				1EBCEB2E27E622F700E536B8 /* URLResponder+Additions.swift in Sources */,
+				1EBCEB3B27E622F700E536B8 /* UnfairLock.swift in Sources */,
+				1EBCEB2027E622F700E536B8 /* VHRequest.swift in Sources */,
+				1EBCEB1D27E622F700E536B8 /* VHService+RetryPolicy.swift in Sources */,
+				1EBCEB2227E622F700E536B8 /* VHDataLiteralType.swift in Sources */,
+				1EBCEB2A27E622F700E536B8 /* VHService+Combine.swift in Sources */,
+				1EBCEB3C27E622F700E536B8 /* NotificationToken+NSObject.swift in Sources */,
+				1EBCEB3227E622F700E536B8 /* URLRequest+Additions.swift in Sources */,
+				1EBCEB2F27E622F700E536B8 /* Error+Additions.swift in Sources */,
+				1EBCEB3D27E622F700E536B8 /* NotificationToken.swift in Sources */,
+				1EBCEB2C27E622F700E536B8 /* URLSessionConfiguration+Additions.swift in Sources */,
+				1EBCEB1C27E622F700E536B8 /* VHService+SessionDelegate.swift in Sources */,
+				1EBCEB3427E622F700E536B8 /* Result+Additions.swift in Sources */,
+				1EBCEB3827E622F700E536B8 /* VHServiceLogger.swift in Sources */,
+				1EBCEB2627E622F700E536B8 /* VHService+Response.swift in Sources */,
+				1EBCEB2427E622F700E536B8 /* VHService+DownloadRequest.swift in Sources */,
+				1EBCEB2127E622F700E536B8 /* VHService+Request.swift in Sources */,
+				1EBCEB3527E622F700E536B8 /* Decodable+Additions.swift in Sources */,
+				1EBCEB3127E622F700E536B8 /* Float+Additions.swift in Sources */,
+				1EBCEB2927E622F700E536B8 /* VHService.swift in Sources */,
+				1EBCEB2B27E622F700E536B8 /* Encodable+Additions.swift in Sources */,
+				1EBCEB2527E622F700E536B8 /* VHService+Additions.swift in Sources */,
+				1EBCEB2727E622F700E536B8 /* VHServiceEnvironment.swift in Sources */,
+				1EBCEB3027E622F700E536B8 /* Any+Additions.swift in Sources */,
+				1EBCEB1E27E622F700E536B8 /* VHService+DefaultRequest.swift in Sources */,
+				1EBCEB1F27E622F700E536B8 /* VHRequest+URLRequest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1EBCEAE427E621F000E536B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1EBCEAE527E621F000E536B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1EBCEAE727E621F000E536B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 3VJ9KR4Y5N;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vidalhara.VHService;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1EBCEAE827E621F000E536B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 3VJ9KR4Y5N;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vidalhara.VHService;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1EBCEAD727E621F000E536B8 /* Build configuration list for PBXProject "VHService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1EBCEAE427E621F000E536B8 /* Debug */,
+				1EBCEAE527E621F000E536B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1EBCEAE627E621F000E536B8 /* Build configuration list for PBXNativeTarget "VHService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1EBCEAE727E621F000E536B8 /* Debug */,
+				1EBCEAE827E621F000E536B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1EBCEAD427E621F000E536B8 /* Project object */;
+}
