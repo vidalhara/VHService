@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>VHService Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Class/VHService" class="dashAnchor"></a>
+
+    <a title="VHService Class Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          VHService 2.0.0 Docs
+        </a>
+         (100% documented)
+      </p>
+    
+      <div class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </div>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/vidalhara/VHService">
+            <img class="header-icon" src="../img/gh.png" alt="GitHub"/>
+            View on GitHub
+          </a>
+        </p>
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">VHService Reference</a>
+      <img class="carat" src="../img/carat.png" alt=""/>
+      VHService Class Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/VHService.html">VHService</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/VHService/RetryPolicy.html">– RetryPolicy</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/VHServiceLogger.html">VHServiceLogger</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/VHHTTPMethod.html">VHHTTPMethod</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/VHServiceError.html">VHServiceError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions.html#/s:Sa">Array</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Data.html">Data</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Decodable.html">Decodable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Dictionary.html">Dictionary</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Encodable.html">Encodable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/URLSessionConfiguration.html">URLSessionConfiguration</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/VHDataLiteralType.html">VHDataLiteralType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/VHInterceptor.html">VHInterceptor</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/VHRequest.html">VHRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/VHServiceEnvironment.html">VHServiceEnvironment</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/VHServiceLoggerLevel.html">VHServiceLoggerLevel</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content top-matter">
+            <h1>VHService</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">class</span> <span class="kt">VHService</span></code></pre>
+
+                </div>
+              </div>
+            <p>VHService which hepls you to send basic HTTP Requests &amp; Download Requests &amp; Upload Requests</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9VHServiceAAC10Completiona"></a>
+                    <a name="//apple_ref/swift/Alias/Completion" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9VHServiceAAC10Completiona">Completion</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This is the <code>ComponentAPIRequest.send(...)</code> or <code>ComponentAPIRequest.upload(...)</code> completion block type</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">Completion</span> <span class="o">=</span> <span class="p">(</span><span class="kt">Result</span><span class="o">&lt;</span><span class="kt">Data</span><span class="p">,</span> <span class="kt">Error</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9VHServiceAAC18DownloadCompletiona"></a>
+                    <a name="//apple_ref/swift/Alias/DownloadCompletion" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9VHServiceAAC18DownloadCompletiona">DownloadCompletion</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This is the <code>ComponentAPIRequest.download(...)</code> completion block type</p>
+<div class="aside aside-attention">
+    <p class="aside-title">Attention</p>
+    Url is a temporary directory you should move or use it when this block called.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">DownloadCompletion</span> <span class="o">=</span> <span class="p">(</span><span class="kt">Result</span><span class="o">&lt;</span><span class="kt">URL</span><span class="p">,</span> <span class="kt">Error</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9VHServiceAAC13ProgressBlocka"></a>
+                    <a name="//apple_ref/swift/Alias/ProgressBlock" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9VHServiceAAC13ProgressBlocka">ProgressBlock</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This is the <code>ComponentAPIRequest.download(...)</code> or <code>ComponentAPIRequest.upload(...)</code> progress block type</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">ProgressBlock</span> <span class="o">=</span> <span class="p">(</span><span class="n">_</span> <span class="nv">progress</span><span class="p">:</span> <span class="kt">CGFloat</span><span class="p">,</span> <span class="n">_</span> <span class="nv">current</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">,</span> <span class="n">_</span> <span class="nv">total</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9VHServiceAAC25cancelsPreviousOperationsSbvp"></a>
+                    <a name="//apple_ref/swift/Property/cancelsPreviousOperations" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9VHServiceAAC25cancelsPreviousOperationsSbvp">cancelsPreviousOperations</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If true service cancels the previous task which has same <code><a href="../Protocols/VHRequest.html#/s:9VHService9VHRequestP10identifierSSvp">VHRequest.identifier</a></code>. Default value is true.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">cancelsPreviousOperations</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9VHServiceAAC11environmentAA0A11Environment_pvp"></a>
+                    <a name="//apple_ref/swift/Property/environment" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9VHServiceAAC11environmentAA0A11Environment_pvp">environment</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Environment of the service. If changed, new environment will only used for the new sended requests.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">environment</span><span class="p">:</span> <span class="kt"><a href="../Protocols/VHServiceEnvironment.html">VHServiceEnvironment</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9VHServiceAAC7sessionSo12NSURLSessionCvp"></a>
+                    <a name="//apple_ref/swift/Property/session" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9VHServiceAAC7sessionSo12NSURLSessionCvp">session</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Session of the service</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">private(set)</span> <span class="kd">lazy</span> <span class="k">var</span> <span class="nv">session</span><span class="p">:</span> <span class="kt">URLSession</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9VHServiceAAC11environment13configuration12interceptorsAbA0A11Environment_p_So25NSURLSessionConfigurationCSayAA13VHInterceptor_pGtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(environment:configuration:interceptors:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9VHServiceAAC11environment13configuration12interceptorsAbA0A11Environment_p_So25NSURLSessionConfigurationCSayAA13VHInterceptor_pGtcfc">init(environment:<wbr>configuration:<wbr>interceptors:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>You can use Service to send requests</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span>
+    <span class="nv">environment</span><span class="p">:</span> <span class="kt"><a href="../Protocols/VHServiceEnvironment.html">VHServiceEnvironment</a></span><span class="p">,</span>
+    <span class="nv">configuration</span><span class="p">:</span> <span class="kt">URLSessionConfiguration</span> <span class="o">=</span> <span class="o">.</span><span class="nf">vhDefault</span><span class="p">(),</span>
+    <span class="nv">interceptors</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Protocols/VHInterceptor.html">VHInterceptor</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>environment</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Settings of the service</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>configuration</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>URLSessionConfiguration. If you want, you can use predefined <code><a href="../Extensions/URLSessionConfiguration.html#/s:So25NSURLSessionConfigurationC9VHServiceE9vhDefaultAByFZ">URLSessionConfiguration.vhDefault()</a></code> or <code>URLSessionConfiguration.vhBackground()</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>interceptors</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Array of <code><a href="../Protocols/VHInterceptor.html">VHInterceptor</a></code>s to take additional actions</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9VHServiceAAC4send_5queue10completionyAA9VHRequest_p_So012OS_dispatch_C0CSgys6ResultOy10Foundation4DataVs5Error_pGctF"></a>
+                    <a name="//apple_ref/swift/Method/send(_:queue:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9VHServiceAAC4send_5queue10completionyAA9VHRequest_p_So012OS_dispatch_C0CSgys6ResultOy10Foundation4DataVs5Error_pGctF">send(_:<wbr>queue:<wbr>completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>You can send your request in this method</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">send</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">request</span><span class="p">:</span> <span class="kt"><a href="../Protocols/VHRequest.html">VHRequest</a></span><span class="p">,</span> <span class="nv">queue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/VHService.html#/s:9VHServiceAAC10Completiona">Completion</a></span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>request</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code><a href="../Protocols/VHRequest.html">VHRequest</a></code> you want to send</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>queue</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Queue to run completion</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Completion block of the request</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9VHServiceAAC8sendHTTP_5queue10completionyAA9VHRequest_p_So012OS_dispatch_D0CSgys6ResultOy10Foundation4DataVSg_So17NSHTTPURLResponseCts5Error_pGctF"></a>
+                    <a name="//apple_ref/swift/Method/sendHTTP(_:queue:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9VHServiceAAC8sendHTTP_5queue10completionyAA9VHRequest_p_So012OS_dispatch_D0CSgys6ResultOy10Foundation4DataVSg_So17NSHTTPURLResponseCts5Error_pGctF">sendHTTP(_:<wbr>queue:<wbr>completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>You can send your request in this method</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">sendHTTP</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">request</span><span class="p">:</span> <span class="kt"><a href="../Protocols/VHRequest.html">VHRequest</a></span><span class="p">,</span> <span class="nv">queue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Result</span><span class="o">&lt;</span><span class="p">(</span><span class="kt">Data</span><span class="p">?,</span> <span class="kt">HTTPURLResponse</span><span class="p">),</span> <span class="kt">Error</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>request</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code><a href="../Protocols/VHRequest.html">VHRequest</a></code> you want to send</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>queue</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Queue to run completion</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Completion block of the request with HTTPURLResponse</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9VHServiceAAC4send_5queue10completiony10Foundation3URLV_So012OS_dispatch_C0CSgys6ResultOyAF4DataVs5Error_pGctF"></a>
+                    <a name="//apple_ref/swift/Method/send(_:queue:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9VHServiceAAC4send_5queue10completiony10Foundation3URLV_So012OS_dispatch_C0CSgys6ResultOyAF4DataVs5Error_pGctF">send(_:<wbr>queue:<wbr>completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>You can send your GET request to URL in this method</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">send</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span> <span class="nv">queue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/VHService.html#/s:9VHServiceAAC10Completiona">Completion</a></span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>url</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>URL you want to send GET Request</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>queue</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Queue to run completion</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Completion block of the request</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9VHServiceAAC8download_8progress10completionyAA9VHRequest_p_y14CoreFoundation7CGFloatV_s5Int64VAKtcys6ResultOy0G03URLVs5Error_pGctF"></a>
+                    <a name="//apple_ref/swift/Method/download(_:progress:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9VHServiceAAC8download_8progress10completionyAA9VHRequest_p_y14CoreFoundation7CGFloatV_s5Int64VAKtcys6ResultOy0G03URLVs5Error_pGctF">download(_:<wbr>progress:<wbr>completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>You can send your download request in this method</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">download</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">request</span><span class="p">:</span> <span class="kt"><a href="../Protocols/VHRequest.html">VHRequest</a></span><span class="p">,</span> <span class="nv">progress</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/VHService.html#/s:9VHServiceAAC13ProgressBlocka">ProgressBlock</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/VHService.html#/s:9VHServiceAAC18DownloadCompletiona">DownloadCompletion</a></span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>request</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code><a href="../Protocols/VHRequest.html">VHRequest</a></code> you want to send</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>progress</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Progress block of the download request. Block called in request queue.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Completion block of the download request. Block called in request queue.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9VHServiceAAC8download_8progress10completiony10Foundation3URLV_y04CoreE07CGFloatV_s5Int64VAMtcys6ResultOyAHs5Error_pGctF"></a>
+                    <a name="//apple_ref/swift/Method/download(_:progress:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9VHServiceAAC8download_8progress10completiony10Foundation3URLV_y04CoreE07CGFloatV_s5Int64VAMtcys6ResultOyAHs5Error_pGctF">download(_:<wbr>progress:<wbr>completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>You can send your download GET request in this method</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">download</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span> <span class="nv">progress</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/VHService.html#/s:9VHServiceAAC13ProgressBlocka">ProgressBlock</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/VHService.html#/s:9VHServiceAAC18DownloadCompletiona">DownloadCompletion</a></span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>url</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>URL you want to send GET Request</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>progress</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Progress block of the download request. Block called in request queue.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Completion block of the download request. Block called in request queue.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9VHServiceAAC6upload_7fileURL8progress10completionyAA9VHRequest_p_10Foundation0D0Vy04CoreH07CGFloatV_s5Int64VAOtcys6ResultOyAH4DataVs5Error_pGctF"></a>
+                    <a name="//apple_ref/swift/Method/upload(_:fileURL:progress:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9VHServiceAAC6upload_7fileURL8progress10completionyAA9VHRequest_p_10Foundation0D0Vy04CoreH07CGFloatV_s5Int64VAOtcys6ResultOyAH4DataVs5Error_pGctF">upload(_:<wbr>fileURL:<wbr>progress:<wbr>completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>You can send your upload request in this method</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">upload</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">request</span><span class="p">:</span> <span class="kt"><a href="../Protocols/VHRequest.html">VHRequest</a></span><span class="p">,</span> <span class="nv">fileURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span> <span class="nv">progress</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/VHService.html#/s:9VHServiceAAC13ProgressBlocka">ProgressBlock</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/VHService.html#/s:9VHServiceAAC10Completiona">Completion</a></span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>request</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code><a href="../Protocols/VHRequest.html">VHRequest</a></code> you want to send</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fileURL</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The URL of the file to upload</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>progress</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Progress block of the upload request. Block called in request queue.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Completion block of the upload request. Block called in request queue.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9VHServiceAAC9cancelAllyyF"></a>
+                    <a name="//apple_ref/swift/Method/cancelAll()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9VHServiceAAC9cancelAllyyF">cancelAll()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Cancels all the requests</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">cancelAll</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9VHServiceAAC4send_5queue7Combine6FutureCy10Foundation4DataVs5Error_pGAA9VHRequest_p_So012OS_dispatch_C0CSgtF"></a>
+                    <a name="//apple_ref/swift/Method/send(_:queue:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9VHServiceAAC4send_5queue7Combine6FutureCy10Foundation4DataVs5Error_pGAA9VHRequest_p_So012OS_dispatch_C0CSgtF">send(_:<wbr>queue:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>You can send your request in this method</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">send</span><span class="p">(</span><span class="n">_</span> <span class="nv">request</span><span class="p">:</span> <span class="kt"><a href="../Protocols/VHRequest.html">VHRequest</a></span><span class="p">,</span> <span class="nv">queue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Data</span><span class="p">,</span> <span class="kt">Error</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>request</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code><a href="../Protocols/VHRequest.html">VHRequest</a></code> you want to send</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>queue</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Queue to run Future</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A publisher that eventually produces a Data or fails.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9VHServiceAAC8sendHTTP_5queue7Combine6FutureCy10Foundation4DataVSg_So17NSHTTPURLResponseCts5Error_pGAA9VHRequest_p_So012OS_dispatch_D0CSgtF"></a>
+                    <a name="//apple_ref/swift/Method/sendHTTP(_:queue:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9VHServiceAAC8sendHTTP_5queue7Combine6FutureCy10Foundation4DataVSg_So17NSHTTPURLResponseCts5Error_pGAA9VHRequest_p_So012OS_dispatch_D0CSgtF">sendHTTP(_:<wbr>queue:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>You can send your request in this method</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">sendHTTP</span><span class="p">(</span><span class="n">_</span> <span class="nv">request</span><span class="p">:</span> <span class="kt"><a href="../Protocols/VHRequest.html">VHRequest</a></span><span class="p">,</span> <span class="nv">queue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="p">(</span><span class="kt">Data</span><span class="p">?,</span> <span class="kt">HTTPURLResponse</span><span class="p">),</span> <span class="kt">Error</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>request</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code><a href="../Protocols/VHRequest.html">VHRequest</a></code> you want to send</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>queue</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Queue to run completion</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A publisher that eventually produces (Data?, HTTPURLResponse) or fails.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9VHServiceAAC4send_5queue7Combine6FutureCy10Foundation4DataVs5Error_pGAH3URLV_So012OS_dispatch_C0CSgtF"></a>
+                    <a name="//apple_ref/swift/Method/send(_:queue:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9VHServiceAAC4send_5queue7Combine6FutureCy10Foundation4DataVs5Error_pGAH3URLV_So012OS_dispatch_C0CSgtF">send(_:<wbr>queue:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>You can send your GET request to URL in this method</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">send</span><span class="p">(</span><span class="n">_</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span> <span class="nv">queue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Data</span><span class="p">,</span> <span class="kt">Error</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>url</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>URL you want to send GET Request</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>queue</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Queue to run completion</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A publisher that eventually produces a Data or fails.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9VHServiceAAC8download_8progress7Combine6FutureCy10Foundation3URLVs5Error_pGAA9VHRequest_p_y04CoreF07CGFloatV_s5Int64VARtctF"></a>
+                    <a name="//apple_ref/swift/Method/download(_:progress:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9VHServiceAAC8download_8progress7Combine6FutureCy10Foundation3URLVs5Error_pGAA9VHRequest_p_y04CoreF07CGFloatV_s5Int64VARtctF">download(_:<wbr>progress:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>You can send your download request in this method</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">download</span><span class="p">(</span><span class="n">_</span> <span class="nv">request</span><span class="p">:</span> <span class="kt"><a href="../Protocols/VHRequest.html">VHRequest</a></span><span class="p">,</span> <span class="nv">progress</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/VHService.html#/s:9VHServiceAAC13ProgressBlocka">ProgressBlock</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">URL</span><span class="p">,</span> <span class="kt">Error</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>request</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code><a href="../Protocols/VHRequest.html">VHRequest</a></code> you want to send</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>progress</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Progress block of the download request. Block called in request queue.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A publisher that eventually produces an URL or fails.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9VHServiceAAC8download_8progress7Combine6FutureCy10Foundation3URLVs5Error_pGAJ_y04CoreF07CGFloatV_s5Int64VAQtctF"></a>
+                    <a name="//apple_ref/swift/Method/download(_:progress:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9VHServiceAAC8download_8progress7Combine6FutureCy10Foundation3URLVs5Error_pGAJ_y04CoreF07CGFloatV_s5Int64VAQtctF">download(_:<wbr>progress:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>You can send your download GET request in this method</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">download</span><span class="p">(</span><span class="n">_</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span> <span class="nv">progress</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/VHService.html#/s:9VHServiceAAC13ProgressBlocka">ProgressBlock</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">URL</span><span class="p">,</span> <span class="kt">Error</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>url</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>URL you want to send GET Request</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>progress</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Progress block of the download request. Block called in request queue.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A publisher that eventually produces an URL or fails.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9VHServiceAAC6upload_7fileURL8progress7Combine6FutureCy10Foundation4DataVs5Error_pGAA9VHRequest_p_AI0D0Vy04CoreH07CGFloatV_s5Int64VAUtctF"></a>
+                    <a name="//apple_ref/swift/Method/upload(_:fileURL:progress:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9VHServiceAAC6upload_7fileURL8progress7Combine6FutureCy10Foundation4DataVs5Error_pGAA9VHRequest_p_AI0D0Vy04CoreH07CGFloatV_s5Int64VAUtctF">upload(_:<wbr>fileURL:<wbr>progress:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>You can send your upload request in this method</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">upload</span><span class="p">(</span><span class="n">_</span> <span class="nv">request</span><span class="p">:</span> <span class="kt"><a href="../Protocols/VHRequest.html">VHRequest</a></span><span class="p">,</span> <span class="nv">fileURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span> <span class="nv">progress</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/VHService.html#/s:9VHServiceAAC13ProgressBlocka">ProgressBlock</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Future</span><span class="o">&lt;</span><span class="kt">Data</span><span class="p">,</span> <span class="kt">Error</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>request</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code><a href="../Protocols/VHRequest.html">VHRequest</a></code> you want to send</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fileURL</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The URL of the file to upload</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>progress</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Progress block of the upload request. Block called in request queue.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A publisher that eventually produces a Data or fails.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9VHServiceAAC11RetryPolicyO"></a>
+                    <a name="//apple_ref/swift/Enum/RetryPolicy" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9VHServiceAAC11RetryPolicyO">RetryPolicy</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Policy to decide retring request or not</p>
+
+                        <a href="../Classes/VHService/RetryPolicy.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">RetryPolicy</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>Copyright © 2016 Vidal HARA. VHService released under MIT License.</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+    </section>
+  </body>
+</html>

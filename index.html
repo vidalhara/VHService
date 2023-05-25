@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>VHService  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+
+    <a title="VHService  Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="index.html">
+          VHService 2.0.0 Docs
+        </a>
+         (100% documented)
+      </p>
+    
+      <div class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </div>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/vidalhara/VHService">
+            <img class="header-icon" src="img/gh.png" alt="GitHub"/>
+            View on GitHub
+          </a>
+        </p>
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="index.html">VHService Reference</a>
+      <img class="carat" src="img/carat.png" alt=""/>
+      VHService  Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/VHService.html">VHService</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/VHService/RetryPolicy.html">– RetryPolicy</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/VHServiceLogger.html">VHServiceLogger</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/VHHTTPMethod.html">VHHTTPMethod</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/VHServiceError.html">VHServiceError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions.html#/s:Sa">Array</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/Data.html">Data</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/Decodable.html">Decodable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/Dictionary.html">Dictionary</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/Encodable.html">Encodable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/URLSessionConfiguration.html">URLSessionConfiguration</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/VHDataLiteralType.html">VHDataLiteralType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/VHInterceptor.html">VHInterceptor</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/VHRequest.html">VHRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/VHServiceEnvironment.html">VHServiceEnvironment</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/VHServiceLoggerLevel.html">VHServiceLoggerLevel</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content top-matter">
+            
+            <h1 id='vhservice' class='heading'>VHService</h1>
+
+<p><a href="https://img.shields.io/badge/Swift-5.0_5.1_5.2_5.3_5.4_5.5_5.6_5.7-Orange"><img src="https://img.shields.io/badge/Swift-5.0_5.1_5.2_5.3_5.4_5.5_5.6_5.7-blue" alt="Swift"></a>
+<a href="https://img.shields.io/badge/Platforms-iOS-Blue"><img src="https://img.shields.io/badge/Platforms-iOS-blue" alt="Platforms"></a>
+<a href="https://img.shields.io/cocoapods/v/VHService?color=pistachiogreen"><img src="https://img.shields.io/cocoapods/v/VHService?color=pistachiogreen" alt="CocoaPods Compatible"></a>
+<a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg" alt="Carthage Compatible"></a>
+<a href="https://img.shields.io/badge/Swift_Package_Manager-compatible-pistachiogreen"><img src="https://img.shields.io/badge/Swift_Package_Manager-compatible-pistachiogreen" alt="Swift Package Manager"></a></p>
+
+<p>VHService is a simple HTTP networking library written in Swift.</p>
+
+<ul>
+<li><a href="#features">Features</a></li>
+<li><a href="#requirements">Requirements</a></li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#license">License</a></li>
+</ul>
+<h2 id='features' class='heading'>Features</h2>
+
+<ul>
+<li>[x] Request / Response Methods</li>
+<li>[x] Combine Support Back to iOS 13</li>
+<li>[x] URL / JSON Parameter Encoding</li>
+<li>[x] Upload / Download File</li>
+<li>[x] Upload / Download Progress Closures with Progress</li>
+<li>[x] Dynamically Adapt and Retry Requests</li>
+<li>[x] <a href="https://vidalhara.github.io/VHService/">Complete Documentation</a></li>
+</ul>
+<h2 id='requirements' class='heading'>Requirements</h2>
+
+<table><thead>
+<tr>
+<th>Platform</th>
+<th>Minimum Swift Version</th>
+<th>Installation</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>iOS 12.0+</td>
+<td>5.0</td>
+<td><a href="#cocoapods">CocoaPods</a>, <a href="#carthage">Carthage</a>, <a href="#swift-package-manager">Swift Package Manager</a></td>
+</tr>
+</tbody></table>
+<h2 id='installation' class='heading'>Installation</h2>
+<h3 id='cocoapods' class='heading'>CocoaPods</h3>
+
+<p><a href="https://cocoapods.org">CocoaPods</a> is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate VHService into your Xcode project using CocoaPods, specify it in your <code>Podfile</code>:</p>
+<pre class="highlight plaintext"><code>pod 'VHService', '~&gt; 2.0.0'
+</code></pre>
+<h3 id='carthage' class='heading'>Carthage</h3>
+
+<p><a href="https://github.com/Carthage/Carthage">Carthage</a> is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate VHService into your Xcode project using Carthage, specify it in your <code>Cartfile</code>:</p>
+<pre class="highlight plaintext"><code>github "vidalhara/VHService" ~&gt; 2.0
+</code></pre>
+<h3 id='swift-package-manager' class='heading'>Swift Package Manager</h3>
+
+<p>The <a href="https://swift.org/package-manager/">Swift Package Manager</a> is a tool for automating the distribution of Swift code and is integrated into the <code>swift</code> compiler. </p>
+
+<p>Once you have your Swift package set up, adding VHService as a dependency is as easy as adding it to the <code>dependencies</code> value of your <code>Package.swift</code>.</p>
+<pre class="highlight plaintext"><code>dependencies: [
+    .package(url: "https://github.com/vidalhara/VHService.git", .upToNextMajor(from: "2.0.0"))
+]
+</code></pre>
+<h2 id='license' class='heading'>License</h2>
+
+<p>VHService is released under the MIT license. <a href="https://github.com/vidalhara/VHService/blob/master/LICENSE">See LICENSE</a> for details.</p>
+
+          </div>
+        </section>
+
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>Copyright © 2016 Vidal HARA. VHService released under MIT License.</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+    </section>
+  </body>
+</html>
