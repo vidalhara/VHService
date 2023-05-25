@@ -11,12 +11,15 @@ import Foundation
 internal extension VHService {
 
     class SessionDelegate: NSObject {
-        internal lazy var requests: VHCache<Int, Request> = .init(hasLock: true, clearsWhenMemoryWarning: false)
-
-        internal weak var service: VHService?
+        private lazy var requests: VHCache<Int, Request> = .init(hasLock: true, clearsWhenMemoryWarning: false)
+        private weak var service: VHService?
 
         internal init(for service: VHService) {
             self.service = service
+        }
+
+        internal func add(request: Request, for identifier: Int) {
+            requests[identifier] = request
         }
 
         internal func remove(task: URLSessionTask) -> Request? {
@@ -26,6 +29,13 @@ internal extension VHService {
             }
             return .none
         }
+
+        internal func complete(task: URLSessionTask, with error: Error?) {
+            let request = remove(task: task)
+            if let service = service {
+                request?.complete(task: task, error: error, in: service)
+            }
+        }
     }
 }
 
@@ -34,10 +44,7 @@ internal extension VHService {
 extension VHService.SessionDelegate: URLSessionTaskDelegate {
 
     func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
-        guard let service = service else { return }
-
-        let request = remove(task: task)
-        request?.complete(task: task, error: error, in: service)
+        complete(task: task, with: error)
     }
 
     func urlSession(
@@ -90,4 +97,3 @@ extension VHService.SessionDelegate: URLSessionDownloadDelegate {
         item.progress(totalBytesWritten.cg ^/ totalBytesExpectedToWrite.cg, totalBytesWritten, totalBytesExpectedToWrite)
     }
 }
-

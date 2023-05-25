@@ -1,11 +1,11 @@
-// swift-tools-version:5.5
+// swift-tools-version:5.7
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
 
 let package = Package(
     name: "VHService",
-    platforms: [.iOS(.v10)],
+    platforms: [.iOS(.v12)],
     products: [
         .library(
             name: "VHService",
@@ -17,6 +17,5 @@ let package = Package(
             name: "VHService",
             exclude: ["Info.plist"]
         )
-    ],
-    swiftLanguageVersions: [.v4, .v4_2, .v5]
+    ]
 )

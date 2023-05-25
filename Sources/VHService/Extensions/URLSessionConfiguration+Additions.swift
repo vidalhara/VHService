@@ -30,7 +30,6 @@ public extension URLSessionConfiguration {
     ///
     /// Request cache policy is `URLRequest.CachePolicy.reloadIgnoringCacheData`.
     /// `URLSessionConfiguration.urlCache` is nil.
-    /// Timeout interval for request is 25.
     /// Timeout interval for resource  is 50.
     /// - Parameter identifier: Identifier of the backgroundSession
     /// - Returns: Background URLSessionConfiguration
@@ -38,7 +37,7 @@ public extension URLSessionConfiguration {
         let session = URLSessionConfiguration.background(withIdentifier: identifier)
         session.requestCachePolicy = .reloadIgnoringLocalCacheData
         session.urlCache = nil
-        session.timeoutIntervalForRequest = 25
+        session.timeoutIntervalForRequest = 50
         session.timeoutIntervalForResource = 50
         return session
     }

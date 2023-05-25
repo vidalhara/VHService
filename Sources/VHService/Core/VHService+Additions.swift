@@ -8,20 +8,6 @@
 
 import Foundation
 
-// MARK: - WeakHolder
-
-internal extension VHService {
-
-    final class WeakHolder<T: AnyObject> {
-
-        public weak var item: T?
-
-        public init(_ item: T) {
-            self.item = item
-        }
-    }
-}
-
 // MARK: - ResponseFinalizer
 
 internal extension Optional where Wrapped == DispatchQueue {

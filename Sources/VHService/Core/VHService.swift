@@ -22,7 +22,7 @@ open class VHService {
 
     internal typealias InternalCompletion = (Result<Response, Error>) -> Void
 
-    /// If true service cancels the previous task which has same `VHHTTPTask.identifier`. Default value is true.
+    /// If true service cancels the previous task which has same `VHRequest.identifier`. Default value is true.
     public var cancelsPreviousOperations: Bool = true
 
     /// Environment of the service. If changed, new environment will only used for the new sended requests.
@@ -31,16 +31,29 @@ open class VHService {
     internal lazy var sessionDelegate: SessionDelegate = SessionDelegate(for: self)
 
     /// Session of the service
-    public private(set) lazy var session: URLSession = URLSession(configuration: .vhDefault(), delegate: sessionDelegate, delegateQueue: nil)
+    public private(set) lazy var session: URLSession = URLSession(
+        configuration: .vhDefault(), delegate: sessionDelegate, delegateQueue: nil
+    )
+
+    internal let connectionService = ConnectivityService.shared
 
     private lazy var cancelOperations: [String: () -> Void] = [:]
-    private let lock = UnfairLock()
+    private let lock = NSLock()
+
+    private let interceptors: [VHInterceptor]
 
     /// You can use Service to send requests
     /// - Parameter environment: Settings of the service
     /// - Parameter configuration: URLSessionConfiguration. If you want, you can use predefined `URLSessionConfiguration.vhDefault()` or `URLSessionConfiguration.vhBackground()`
-    public init(environment: VHServiceEnvironment, configuration: URLSessionConfiguration = .vhDefault()) {
+    ///
+    /// - Parameter interceptors: Array of `VHInterceptor`s to take additional actions
+    public init(
+        environment: VHServiceEnvironment,
+        configuration: URLSessionConfiguration = .vhDefault(),
+        interceptors: [VHInterceptor] = []
+    ) {
         self.environment = environment
+        self.interceptors = interceptors
         self.session = URLSession(configuration: configuration, delegate: sessionDelegate, delegateQueue: nil)
     }
 
@@ -51,7 +64,7 @@ open class VHService {
     ///   - queue: Queue to run completion
     ///   - completion: Completion block of the request
     open func send(
-        _ request: VHRequest, queue: DispatchQueue? = .main, completion: @escaping Completion
+        _ request: VHRequest, queue: DispatchQueue? = nil, completion: @escaping Completion
     ) {
         send(request, queue: queue, internalCompletion: { result in
             completion(result.compactMap({ $0.data }))
@@ -65,7 +78,7 @@ open class VHService {
     ///   - queue: Queue to run completion
     ///   - completion: Completion block of the request with HTTPURLResponse
     open func sendHTTP(
-        _ request: VHRequest, queue: DispatchQueue? = .main, completion: @escaping (Result<(Data?, HTTPURLResponse), Error>) -> Void
+        _ request: VHRequest, queue: DispatchQueue? = nil, completion: @escaping (Result<(Data?, HTTPURLResponse), Error>) -> Void
     ) {
         send(request, queue: queue, internalCompletion: { result in
             let newResult = result.compactMap { result -> (Data?, HTTPURLResponse)? in
@@ -95,7 +108,7 @@ open class VHService {
     ///   - queue: Queue to run completion
     ///   - completion: Completion block of the request
     open func send(
-        _ url: URL, queue: DispatchQueue? = .main, completion: @escaping Completion
+        _ url: URL, queue: DispatchQueue? = nil, completion: @escaping Completion
     ) {
         let urlRequest = url.urlRequest
         let request = DefaultRequest(request: urlRequest, queue: queue) { result in
@@ -163,7 +176,11 @@ open class VHService {
     /// - Attention: This method can be called multiple times. Ex: If you retry to send request.
     ///
     /// - Parameter request: URLRequest
-    open func additionalConfigure(request: inout URLRequest) {}
+    internal func additionalConfigure(request: inout URLRequest) {
+        for interceptor in interceptors {
+            interceptor.additionalConfiguration(request: &request)
+        }
+    }
 
     /// Decide to retry request if needed
     ///
@@ -173,14 +190,54 @@ open class VHService {
     ///   - session: URLSession of the request
     ///   - error: Error of the response
     ///   - completion: Can be called directly or asynchronously in order to refresh a token
-    open func retry(
+    internal func retry(
         _ request: URLRequest,
         retryCount: Int,
         for session: URLSession,
+        data: Data?,
         dueTo error: Error,
         completion: @escaping (RetryPolicy) -> Void
     ) {
-        completion(.doNotRetry)
+        var actionTaken = false
+        let code = (error as NSError).code
+        for interceptor in interceptors {
+            let inAction = interceptor.retry(
+                request, retryCount: retryCount, for: session, data: data, code: code, dueTo: error, completion: completion
+            )
+            if inAction {
+                actionTaken = true
+                break
+            }
+        }
+
+        if actionTaken == false {
+            completion(.doNotRetry)
+        }
+    }
+
+    /// You can do additional actions for url response
+    /// - Parameters:
+    ///   - result: Result of the request. Data or Error
+    internal func additionalAction(for result: Result<Response, Error>) {
+        let urlResponse = result.item?.response
+        for interceptor in interceptors {
+            interceptor.additionalAction(for: result.map { $0.data }, urlResponse: urlResponse)
+        }
+    }
+
+    /// You can map error before finalize request
+    /// - Parameters:
+    ///   - error: Error of the response
+    ///   - data: Data of the response if exist
+    /// - Returns: Mapped Error. If return value is nil there wont be any change
+    internal func mapError(_ error: Error, with data: Data?) -> Error {
+        let code = (error as NSError).code
+        for interceptor in interceptors {
+            if let newError = interceptor.mapError(error, code: code, with: data) {
+                return newError
+            }
+        }
+        return error
     }
 
     /// Cancels all the requests

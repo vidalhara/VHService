@@ -8,18 +8,7 @@
 
 import Foundation
 
-/// A thin wrapper around `os_unfair_lock`.
-internal final class UnfairLock {
-
-    private var unfairLock = os_unfair_lock()
-
-    private func lock() {
-        os_unfair_lock_lock(&unfairLock)
-    }
-
-    private func unlock() {
-        os_unfair_lock_unlock(&unfairLock)
-    }
+internal extension NSLocking {
 
     func around<T>(_ closure: () -> T) -> T {
         lock(); defer { unlock() }
@@ -32,7 +21,7 @@ internal final class UnfairLock {
     }
 }
 
-internal extension Optional where Wrapped == UnfairLock {
+internal extension Optional where Wrapped: NSLocking {
 
     func around<T>(_ closure: () -> T) -> T {
         switch self {

@@ -33,6 +33,12 @@ extension Dictionary: VHDataLiteralType {
     }
 }
 
+// MARK: - Array
+
+extension Array: VHDataLiteralType where Element: Encodable {}
+
+// MARK: - Encodable
+
 public extension Encodable where Self: VHDataLiteralType {
 
     /// Converts VHDataLiteralType to data using `Encodable.encode()`

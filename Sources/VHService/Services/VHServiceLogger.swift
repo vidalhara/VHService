@@ -39,7 +39,8 @@ public struct VHServiceLoggerLevel: OptionSet {
     ///    3. VHServiceLogLevel.request,
     ///    4. VHServiceLogLevel.response
     static public let debug: VHServiceLoggerLevel = [
-        .none, .error, .request, .response]
+        .none, .error, .request, .response
+    ]
 
     /// ## This level contains: ##
     ///   1. VHServiceLogLevel.none,

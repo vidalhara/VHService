@@ -17,5 +17,8 @@ public extension VHService {
 
         /// Retring request
         case retry
+
+        /// Not retring request and throw Cancel error
+        case throwCancelError
     }
 }

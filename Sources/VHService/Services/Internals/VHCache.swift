@@ -12,57 +12,61 @@ import UIKit
 /// Store data in memory
 internal class VHCache<Key: Hashable, Value>: NSObject {
 
-    private let cache = NSCache<KeyHolder<Key>, ValueHolder<Value>>()
-    private var locker: UnfairLock?
+    private var cache = [KeyHolder<Key>: ValueHolder<Value>]()
+    private var locker: NSLock?
+    private var observerToken: Any? = nil
 
     /// Default it clears its cache once applicationDidReceiveMemoryWarning.
     /// - Parameter clearsWhenMemoryWarning: If true it clears its cache once applicationDidReceiveMemoryWarning.
-    public init(hasLock: Bool = false, clearsWhenMemoryWarning: Bool = true) {
+    internal init(hasLock: Bool = false, clearsWhenMemoryWarning: Bool = true) {
         super.init()
         if clearsWhenMemoryWarning {
-            addNotifications(
-                NotificationCenter.default.observe(name: UIApplication.didReceiveMemoryWarningNotification) {
-                    [unowned self] notification in
-                    self.cache.removeAllObjects()
-                }
-            )
+            observerToken = NotificationCenter.default.observe(name: UIApplication.didReceiveMemoryWarningNotification) {
+                [unowned self] notification in
+                self.cache.removeAll()
+            }
         }
         if hasLock {
-            locker = UnfairLock()
+            locker = NSLock()
         }
     }
+}
 
-    public subscript(_ key: Key) -> Value? {
+// MARK: - Internal API
+
+internal extension VHCache {
+
+    subscript(_ key: Key) -> Value? {
         get {
             return locker.around {
-                cache.object(forKey: KeyHolder(key))?.value
+                cache[KeyHolder(key)]?.value
             }
         }
         set {
             locker.around {
                 if let newValue = newValue {
-                    cache.setObject(ValueHolder(newValue), forKey: KeyHolder(key))
+                    cache[KeyHolder(key)] = ValueHolder(newValue)
                 }
                 else {
-                    cache.removeObject(forKey: KeyHolder(key))
+                    cache.removeValue(forKey: KeyHolder(key))
                 }
             }
         }
     }
 
-    public func removeValue(forKey key: Key) -> Value? {
+    func removeValue(forKey key: Key) -> Value? {
         return locker.around {
-            if let result = cache.object(forKey: KeyHolder(key))?.value {
-                cache.removeObject(forKey: KeyHolder(key))
+            if let result = cache[KeyHolder(key)]?.value {
+                cache.removeValue(forKey: KeyHolder(key))
                 return result
             }
             return nil
         }
     }
 
-    public func removeAll() {
+    func removeAll() {
         locker.around {
-            cache.removeAllObjects()
+            cache.removeAll()
         }
     }
 }

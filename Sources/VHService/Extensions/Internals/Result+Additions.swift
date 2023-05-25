@@ -42,4 +42,9 @@ internal extension Result where Failure == Error {
             return .failure(failure)
         }
     }
+
+    func failIfNeeded(_ error: Error?) -> Self {
+        guard let error = error else { return self }
+        return .failure(error)
+    }
 }

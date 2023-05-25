@@ -3,7 +3,7 @@ readme: README.md
 author: Vidal HARA
 author_url: https://github.com/vidalhara
 github_url: https://github.com/vidalhara/VHService
-copyright: Copyright © 2016 Vidal HARA. VHGradientView released under MIT License.
+copyright: Copyright © 2016 Vidal HARA. VHService released under MIT License.
 output: Docs
 theme: fullwidth
-xcodebuild_arguments: [-project, VHService.xcodeproj, -scheme, VHService, -arch, armv6]
+xcodebuild_arguments: [-project, VHService.xcodeproj, -scheme, VHService, -arch, arm64e]

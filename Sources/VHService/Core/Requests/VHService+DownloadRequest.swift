@@ -15,7 +15,7 @@ internal extension VHService {
         let identifier: String
         var request: URLRequest
         var time: CFAbsoluteTime = CFAbsoluteTimeGetCurrent()
-        var data: NSMutableData?
+        var responseData: NSMutableData?
         var retryCount = 0
 
         let progress: VHService.ProgressBlock
@@ -49,8 +49,14 @@ internal extension VHService.DownloadRequest {
         let response = logResponse(for: task, error: error)
 
         let customizedError = response.convertedError(with: service.environment)
-        retryIfNeeded(in: service, for: customizedError) { [weak self] in
-            self?.completion(Result(error: customizedError))
+        let responseData = response.data
+
+        retryIfNeeded(in: service, data: responseData, for: customizedError) { [weak self, weak service] error in
+            var newError = error ?? customizedError
+            if let error = newError, let anError = service?.mapError(error, with: responseData) {
+                newError = anError
+            }
+            self?.completion(Result(error: newError))
         }
     }
 

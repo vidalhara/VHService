@@ -15,7 +15,7 @@ internal extension VHService {
         let identifier: String
         var request: URLRequest
         var time: CFAbsoluteTime = CFAbsoluteTimeGetCurrent()
-        var data: NSMutableData?
+        var responseData: NSMutableData?
         var retryCount = 0
 
         private let completion: VHService.InternalCompletion
@@ -47,8 +47,14 @@ internal extension VHService.DefaultRequest {
 
         let error = response.convertedError(with: service.environment)
         let result = Result(response, error)
-        retryIfNeeded(in: service, for: error) { [weak self] in
-            self?.completion(result)
+        let responseData = response.data
+        retryIfNeeded(in: service, data: responseData, for: error) { [weak self, weak service] customError in
+            let result = result.failIfNeeded(customError)
+            service?.additionalAction(for: result)
+            let newResult = result.mapError { [weak service] error in
+                return service?.mapError(error, with: responseData) ?? error
+            }
+            self?.completion(newResult)
         }
     }
 }

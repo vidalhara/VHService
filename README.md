@@ -1,6 +1,6 @@
 # VHService
 
-[![Swift](https://img.shields.io/badge/Swift-4.0_5.1_5.2_5.3_5.4_5.5-blue)](https://img.shields.io/badge/Swift-4.0_5.1_5.2_5.3_5.4_5.5-Orange)
+[![Swift](https://img.shields.io/badge/Swift-5.0_5.1_5.2_5.3_5.4_5.5_5.6_5.7-blue)](https://img.shields.io/badge/Swift-5.0_5.1_5.2_5.3_5.4_5.5_5.6_5.7-Orange)
 [![Platforms](https://img.shields.io/badge/Platforms-iOS-blue)](https://img.shields.io/badge/Platforms-iOS-Blue)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/VHService?color=pistachiogreen)](https://img.shields.io/cocoapods/v/VHService?color=pistachiogreen)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg)](https://github.com/Carthage/Carthage)
@@ -27,7 +27,7 @@ VHService is a simple HTTP networking library written in Swift.
 
 | Platform | Minimum Swift Version | Installation |
 | --- | --- | --- |
-| iOS 10.0+ | 4.0 | [CocoaPods](#cocoapods), [Carthage](#carthage), [Swift Package Manager](#swift-package-manager) |
+| iOS 12.0+ | 5.0 | [CocoaPods](#cocoapods), [Carthage](#carthage), [Swift Package Manager](#swift-package-manager) |
 
 ## Installation
 
@@ -36,7 +36,7 @@ VHService is a simple HTTP networking library written in Swift.
 [CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate VHService into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```
-pod 'VHService', '~> 1.0.0'
+pod 'VHService', '~> 2.0.0'
 ```
 
 ### Carthage
@@ -44,7 +44,7 @@ pod 'VHService', '~> 1.0.0'
 [Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate VHService into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```
-github "vidalhara/VHService" ~> 1.0
+github "vidalhara/VHService" ~> 2.0
 ```
 
 ### Swift Package Manager
@@ -55,7 +55,7 @@ Once you have your Swift package set up, adding VHService as a dependency is as 
 
 ```
 dependencies: [
-    .package(url: "https://github.com/vidalhara/VHService.git", .upToNextMajor(from: "1.0.0"))
+    .package(url: "https://github.com/vidalhara/VHService.git", .upToNextMajor(from: "2.0.0"))
 ]
 ```
 

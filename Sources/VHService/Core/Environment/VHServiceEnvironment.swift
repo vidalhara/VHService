@@ -13,7 +13,7 @@ public protocol VHServiceEnvironment {
 
     /// Host of the url
     var host: String { get }
-    /// Port of the url
+    /// Port of the url. Default value is empty string.
     var port: String { get }
 
     /// Acceptable HTTP status codes. Default value is **Set(200...299)**.
@@ -24,6 +24,8 @@ public protocol VHServiceEnvironment {
 }
 
 public extension VHServiceEnvironment {
+
+    var port: String { "" }
 
     var acceptableStatusCodes: Set<Int> { return Set(200...299) }
     var additionalHTTPHeaders: [String: String] { return [:] }
