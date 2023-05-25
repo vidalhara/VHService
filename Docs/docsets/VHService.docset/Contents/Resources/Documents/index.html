@@ -20,20 +20,20 @@
     <header class="header">
       <p class="header-col header-col--primary">
         <a class="header-link" href="index.html">
-          VHService 1.0.0 Docs
+          VHService 2.0.0 Docs
         </a>
          (100% documented)
       </p>
     
-      <p class="header-col--secondary">
+      <div class="header-col--secondary">
         <form role="search" action="search.json">
           <input type="text" placeholder="Search documentation" data-typeahead>
         </form>
-      </p>
+      </div>
     
         <p class="header-col header-col--secondary">
           <a class="header-link" href="https://github.com/vidalhara/VHService">
-            <img class="header-icon" src="img/gh.png"/>
+            <img class="header-icon" src="img/gh.png" alt="GitHub"/>
             View on GitHub
           </a>
         </p>
@@ -42,7 +42,7 @@
 
     <p class="breadcrumbs">
       <a class="breadcrumb" href="index.html">VHService Reference</a>
-      <img class="carat" src="img/carat.png" />
+      <img class="carat" src="img/carat.png" alt=""/>
       VHService  Reference
     </p>
 
@@ -78,6 +78,9 @@
             <a class="nav-group-name-link" href="Extensions.html">Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions.html#/s:Sa">Array</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Extensions/Data.html">Data</a>
               </li>
               <li class="nav-group-task">
@@ -99,6 +102,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/VHDataLiteralType.html">VHDataLiteralType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/VHInterceptor.html">VHInterceptor</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/VHRequest.html">VHRequest</a>
@@ -125,7 +131,7 @@
             
             <h1 id='vhservice' class='heading'>VHService</h1>
 
-<p><a href="https://img.shields.io/badge/Swift-4.0_5.1_5.2_5.3_5.4_5.5-Orange"><img src="https://img.shields.io/badge/Swift-4.0_5.1_5.2_5.3_5.4_5.5-blue" alt="Swift"></a>
+<p><a href="https://img.shields.io/badge/Swift-5.0_5.1_5.2_5.3_5.4_5.5_5.6_5.7-Orange"><img src="https://img.shields.io/badge/Swift-5.0_5.1_5.2_5.3_5.4_5.5_5.6_5.7-blue" alt="Swift"></a>
 <a href="https://img.shields.io/badge/Platforms-iOS-Blue"><img src="https://img.shields.io/badge/Platforms-iOS-blue" alt="Platforms"></a>
 <a href="https://img.shields.io/cocoapods/v/VHService?color=pistachiogreen"><img src="https://img.shields.io/cocoapods/v/VHService?color=pistachiogreen" alt="CocoaPods Compatible"></a>
 <a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg" alt="Carthage Compatible"></a>
@@ -160,8 +166,8 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>iOS 10.0+</td>
-<td>4.0</td>
+<td>iOS 12.0+</td>
+<td>5.0</td>
 <td><a href="#cocoapods">CocoaPods</a>, <a href="#carthage">Carthage</a>, <a href="#swift-package-manager">Swift Package Manager</a></td>
 </tr>
 </tbody></table>
@@ -169,12 +175,12 @@
 <h3 id='cocoapods' class='heading'>CocoaPods</h3>
 
 <p><a href="https://cocoapods.org">CocoaPods</a> is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate VHService into your Xcode project using CocoaPods, specify it in your <code>Podfile</code>:</p>
-<pre class="highlight plaintext"><code>pod 'VHService', '~&gt; 1.0.0'
+<pre class="highlight plaintext"><code>pod 'VHService', '~&gt; 2.0.0'
 </code></pre>
 <h3 id='carthage' class='heading'>Carthage</h3>
 
 <p><a href="https://github.com/Carthage/Carthage">Carthage</a> is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate VHService into your Xcode project using Carthage, specify it in your <code>Cartfile</code>:</p>
-<pre class="highlight plaintext"><code>github "vidalhara/VHService" ~&gt; 1.0
+<pre class="highlight plaintext"><code>github "vidalhara/VHService" ~&gt; 2.0
 </code></pre>
 <h3 id='swift-package-manager' class='heading'>Swift Package Manager</h3>
 
@@ -182,7 +188,7 @@
 
 <p>Once you have your Swift package set up, adding VHService as a dependency is as easy as adding it to the <code>dependencies</code> value of your <code>Package.swift</code>.</p>
 <pre class="highlight plaintext"><code>dependencies: [
-    .package(url: "https://github.com/vidalhara/VHService.git", .upToNextMajor(from: "1.0.0"))
+    .package(url: "https://github.com/vidalhara/VHService.git", .upToNextMajor(from: "2.0.0"))
 ]
 </code></pre>
 <h2 id='license' class='heading'>License</h2>
@@ -196,9 +202,8 @@
       </article>
     </div>
     <section class="footer">
-      <p>Copyright © 2016 Vidal HARA. VHGradientView released under MIT License.</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>Copyright © 2016 Vidal HARA. VHService released under MIT License.</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
     </section>
   </body>
-</div>
 </html>
